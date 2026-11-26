@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Martí Farran Colell</title>
+<link rel="icon" id="fav" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2046%2046%22%3E%3Crect%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2214%22%20fill%3D%22%23121413%22/%3E%3Cpath%20transform%3D%22translate%289.82%2034%29%20scale%28.021%20-.021%29%22%20fill%3D%22%23e5461c%22%20d%3D%22M1191%20750V0H969V664L1015%20659L744%200H512L240%20657L286%20663V0H65V750H424L671%20123H586L831%20750Z%22/%3E%3Cpath%20d%3D%22M25.5%2011.5l5-5%22%20stroke%3D%22%23e5461c%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -369,6 +370,7 @@ let saved=null;try{saved=localStorage.getItem('mfc-theme')}catch(e){}
 if(saved)doc.dataset.theme=saved;
 const isDark=()=>doc.dataset.theme?doc.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
 const paintTh=()=>{$('th').innerHTML=isDark()?sun:moon;readCols()};
+const FAV=['data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2046%2046%22%3E%3Crect%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2214%22%20fill%3D%22%23121413%22/%3E%3Cpath%20transform%3D%22translate%289.82%2034%29%20scale%28.021%20-.021%29%22%20fill%3D%22%23e5461c%22%20d%3D%22M1191%20750V0H969V664L1015%20659L744%200H512L240%20657L286%20663V0H65V750H424L671%20123H586L831%20750Z%22/%3E%3Cpath%20d%3D%22M25.5%2011.5l5-5%22%20stroke%3D%22%23e5461c%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22/%3E%3C/svg%3E','data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2046%2046%22%3E%3Crect%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2214%22%20fill%3D%22%23e8e2d6%22/%3E%3Cpath%20transform%3D%22translate%289.82%2034%29%20scale%28.021%20-.021%29%22%20fill%3D%22%23ff5a36%22%20d%3D%22M1191%20750V0H969V664L1015%20659L744%200H512L240%20657L286%20663V0H65V750H424L671%20123H586L831%20750Z%22/%3E%3Cpath%20d%3D%22M25.5%2011.5l5-5%22%20stroke%3D%22%23ff5a36%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22/%3E%3C/svg%3E'];const setFav=()=>{const l=document.getElementById('fav');if(l)l.href=FAV[isDark()?1:0]};setFav();matchMedia('(prefers-color-scheme:dark)').addEventListener('change',setFav);document.getElementById('th').addEventListener('click',()=>setTimeout(setFav));
 $('th').addEventListener('click',()=>{doc.dataset.theme=isDark()?'light':'dark';try{localStorage.setItem('mfc-theme',doc.dataset.theme)}catch(e){}paintTh()});
 // ---------- data ----------
 const story=[
