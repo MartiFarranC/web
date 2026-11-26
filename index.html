@@ -93,7 +93,9 @@ nav a.on,nav a:hover{background:var(--ink);color:var(--bg)}
 .t:hover::before{opacity:1}
 .t .lab{font-size:13px;color:var(--mut);display:block;margin-bottom:10px}
 .t.w2{grid-column:span 2}
-.clk{font:800 clamp(34px,3.6vw,50px)/1 Unbounded;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.how{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:15px}.how li{display:grid;grid-template-columns:2.2em minmax(0,1fr);align-items:baseline}.how b{font:800 13px Unbounded;color:var(--co)}
+.svc{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}.svc li{background:var(--bg);border:1px solid var(--ln);padding:8px 14px;border-radius:99px;font-weight:600;font-size:14px}
+.go{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:99px;background:var(--co);color:var(--onco);text-decoration:none;font-weight:600;font-size:15px}.go:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 .lang{display:grid;gap:11px}
 .lang div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px;font-size:15px}
 .lang em{font-style:normal;color:var(--mut);font-size:14px}
@@ -101,10 +103,6 @@ nav a.on,nav a:hover{background:var(--ink);color:var(--bg)}
 .lang i::after{content:"";display:block;height:100%;width:0;background:var(--co);border-radius:6px;transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
 .in .lang i::after{width:var(--w)}
 .now{font:600 clamp(18px,1.7vw,23px)/1.3 Unbounded;letter-spacing:-.02em;margin:0}
-.map svg{position:absolute;inset:0;width:100%;height:100%}
-.map{min-height:200px}
-.map .lab{position:relative;z-index:1}
-.map .tag{position:absolute;left:22px;bottom:18px;background:var(--bg);border:1px solid var(--ln);padding:6px 12px;border-radius:10px;font-weight:600;font-size:14px}
 /* story */
 .ch{padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--ln)}
 .chg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px)}
@@ -283,7 +281,7 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;paddin
     </div>
     <div class="hcard t" id="hc">
       <span class="pill"><i></i>Cofundador de CIMS</span>
-      <div class="r2"><span>Base</span><b>Andorra · Anoia · Segarra</b></div>
+      <div class="r2"><span>Experiència</span><b>3 empreses · 1 de cofundada</b></div>
       <div class="r2"><span>Fem</span><b>Solucions tecnològiques amb IA</b></div>
       <div class="r2"><span>Idiomes</span><b>CA · ES · EN · FR</b></div>
     </div>
@@ -313,10 +311,10 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;paddin
 
 <section class="band" style="padding-top:0"><div class="wrap">
   <div class="wg">
-    <div class="t r"><span class="lab">Estat</span><span class="pill" style="margin-bottom:12px"><i></i>Acceptant projectes</span><p style="margin:0;color:var(--mut);font-size:15px">A través de CIMS, per a empreses petites i autònoms.</p></div>
-    <div class="t r" style="--d:.08s"><span class="lab">Hora local</span><div class="clk" id="clk">--:--</div><span class="lab" id="dt" style="margin:8px 0 0"></span></div>
+    <div class="t r"><span class="lab">Estat</span><span class="pill" style="margin-bottom:12px"><i></i>Acceptant projectes</span><p style="margin:0 0 14px;color:var(--mut);font-size:15px">A través de CIMS, per a empreses petites i autònoms.</p><a class="go" href="#ct">Contacta'm <span aria-hidden="true">→</span></a></div>
+    <div class="t r" style="--d:.08s"><span class="lab">Com treballo</span><ol class="how"><li><b>01</b>Escolto què necessites</li><li><b>02</b>Proposo la solució que hi encaixa</li><li><b>03</b>La construeixo i t'acompanyo</li></ol></div>
     <div class="t w2 r" style="--d:.16s"><span class="lab">Idiomes</span><div class="lang"><div>Català<em>Nadiu</em><i style="--w:100%"></i></div><div>Castellà<em>Nadiu</em><i style="--w:100%"></i></div><div>Anglès<em>First (B2)</em><i style="--w:72%"></i></div><div>Francès<em>Conversa</em><i style="--w:45%"></i></div></div></div>
-    <div class="t w2 map r" style="--d:.2s"><svg id="map" aria-hidden="true"></svg><span class="lab">On treballo</span><span class="tag">Andorra · Anoia · Segarra · i en remot</span></div>
+    <div class="t w2 r" style="--d:.2s"><span class="lab">Què faig</span><ul class="svc"><li>Consultoria tecnològica</li><li>Solucions amb IA</li><li>Desenvolupament web</li><li>Automatitzacions</li><li>Informàtica per a empreses</li></ul></div>
     <div class="t w2 r" style="--d:.26s"><span class="lab">Ara mateix</span><p class="now">Fent créixer CIMS i automatitzant processos per a clients a UAUU.</p></div>
   </div>
 </div></section>
@@ -374,7 +372,7 @@ const FAV=['data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%
 $('th').addEventListener('click',()=>{doc.dataset.theme=isDark()?'light':'dark';try{localStorage.setItem('mfc-theme',doc.dataset.theme)}catch(e){}paintTh()});
 // ---------- data ----------
 const story=[
- [['Andorra','Una mare informàtica','Quan vaig descobrir que la meva mare era informàtica, vaig saber que volia formar part d’aquest món.'],['La Massana · Ordino · La Margineda','Créixer entre muntanyes','Primària, secundària i batxillerat andorrans. Fins al 2022 Andorra va ser casa meva.']],
+ [['Andorra','Sempre ho he sabut','Des de petit sempre he sabut que volia formar part del món de la informàtica.'],['La Massana · Ordino · La Margineda','Créixer entre muntanyes','Primària, secundària i batxillerat andorrans. Fins al 2022 Andorra va ser casa meva.']],
  [['Igualada','Universitat de Lleida','Vaig aprendre moltíssimes eines i, sobretot, com funciona de veritat el sector.'],['2022 – 2026','Quatre anys a l’Anoia','Grau a la UdL, campus d’Igualada. Aquí vaig conèixer el meu futur soci.']],
  [['UAUU','Tècnic informàtic','Primer en pràctiques i després a mitja jornada: pàgines web, solucions tecnològiques i automatismes amb GitHub, Supabase i Railway.'],['La nostra mel · STAGE','Cara al públic','Venda a fires i botiga, visites guiades i estius de socorrista. Hi vaig aprendre a tractar amb la gent.']],
  [['CIMS','Dos amics, un projecte gran','Teníem projectes personals per separat i vam decidir unir-nos per crear-ne un de gran.'],['Avui','Consultoria amb IA','Projectes tecnològics creats amb IA i solucions informàtiques per a persones i empreses. D’aquí a tres anys, codirigint una empresa que funcioni.']]];
@@ -395,12 +393,6 @@ D.querySelectorAll('.r').forEach(el=>io.observe(el));
 const roles=['enginyer de software','cofundador de CIMS','desenvolupador full stack','enginyer informàtic','qui t’automatitza la feina'],rot=$('rot');let ri=0,ci=roles[0].length,del=true,hold=0;
 if(!rm)setInterval(()=>{if(hold>0){hold--;return}if(del){ci--;if(ci<=0){del=false;ri=(ri+1)%roles.length}}else{ci++;if(ci>=roles[ri].length){del=true;hold=28}}rot.textContent=roles[ri].slice(0,Math.max(1,ci))},65);
 // ---------- clock ----------
-const tick=()=>{const n=new Date();$('clk').textContent=n.toLocaleTimeString('ca-ES',{hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'Europe/Andorra'});$('dt').textContent=n.toLocaleDateString('ca-ES',{weekday:'long',day:'numeric',month:'long',timeZone:'Europe/Andorra'})};tick();setInterval(tick,1000);
-// ---------- dot map ----------
-const sv=$('map');const dm=()=>{const W=sv.clientWidth,H=sv.clientHeight;let s=11,o='';const rnd=()=>(s=s*16807%2147483647)/2147483647;for(let y=10;y<H;y+=14)for(let x=10;x<W;x+=14){if(rnd()>.3&&y>H*.12+Math.sin(x*.02)*14)o+=`<circle cx="${x}" cy="${y}" r="2" fill="currentColor" opacity=".16"/>`}
- [[.28,.32,'Andorra'],[.62,.62,'Anoia'],[.76,.42,'Segarra']].forEach(([fx,fy,l],i)=>{const px=W*fx,py=H*fy;o+=`<circle cx="${px}" cy="${py}" r="9" fill="var(--co)" opacity=".5"><animate attributeName="r" values="8;22;8" dur="2.4s" begin="${i*.6}s" repeatCount="indefinite"/><animate attributeName="opacity" values=".55;0;.55" dur="2.4s" begin="${i*.6}s" repeatCount="indefinite"/></circle><circle cx="${px}" cy="${py}" r="6" fill="var(--co)"/><text x="${px+12}" y="${py+5}" font-size="13" font-weight="600" fill="currentColor" style="paint-order:stroke;stroke:var(--card);stroke-width:4px">${l}</text>`});
- o+=`<path d="M${W*.28},${H*.32} Q${W*.45},${H*.2} ${W*.76},${H*.42} T${W*.62},${H*.62}" fill="none" stroke="var(--co)" stroke-width="1.5" stroke-dasharray="4 5"/>`;sv.innerHTML=o};
-const roMap=new ResizeObserver(dm);roMap.observe(sv);
 // ---------- spotlight tiles ----------
 D.querySelectorAll('.t').forEach(g=>g.addEventListener('pointermove',e=>{const r=g.getBoundingClientRect();g.style.setProperty('--x',e.clientX-r.left+'px');g.style.setProperty('--y',e.clientY-r.top+'px')}));
 // ---------- scroll: progress, nav, horizontal, clips ----------
