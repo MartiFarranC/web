@@ -6,7 +6,7 @@
 <title>Martí Farran Colell</title>
 <link rel="icon" id="fav" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2046%2046%22%3E%3Crect%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2214%22%20fill%3D%22%23121413%22/%3E%3Cpath%20transform%3D%22translate%289.82%2034%29%20scale%28.021%20-.021%29%22%20fill%3D%22%23e5461c%22%20d%3D%22M1191%20750V0H969V664L1015%20659L744%200H512L240%20657L286%20663V0H65V750H424L671%20123H586L831%20750Z%22/%3E%3Cpath%20d%3D%22M25.5%2011.5l5-5%22%20stroke%3D%22%23e5461c%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 /* VOICE occasion: atrevit i lúdic però net i elegant; ha de donar confiança als clients de CIMS
    IDEA una instal·lació interactiva: un camp de punts viu que reacciona a la persona i després explica una història
@@ -93,8 +93,8 @@ nav a.on,nav a:hover{background:var(--ink);color:var(--bg)}
 .t:hover::before{opacity:1}
 .t .lab{font-size:13px;color:var(--mut);display:block;margin-bottom:10px}
 .t.w2{grid-column:span 2}
-.how{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:15px}.how li{display:grid;grid-template-columns:2.2em minmax(0,1fr);align-items:baseline}.how b{font:800 13px Unbounded;color:var(--co)}
-.svc{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}.svc li{background:var(--bg);border:1px solid var(--ln);padding:8px 14px;border-radius:99px;font-weight:600;font-size:14px}
+.term{background:light-dark(#0b0d0c,#050606);color:#e8e2d6;border-color:light-dark(#0b0d0c,rgba(232,226,214,.13));font:13px/1.6 'JetBrains Mono',ui-monospace,monospace;min-height:210px}.term .lab{color:#9a978f;font-family:Inter,sans-serif}.term .p{color:#ff5a36}.term .o{color:#9a978f;white-space:pre-wrap}.caret{display:inline-block;width:7px;height:14px;background:#ff5a36;vertical-align:-2px;animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.flow{position:relative;height:190px}.flow svg{position:absolute;inset:0;width:100%;height:100%}
 .go{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:99px;background:var(--co);color:var(--onco);text-decoration:none;font-weight:600;font-size:15px}.go:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 .lang{display:grid;gap:11px}
 .lang div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px;font-size:15px}
@@ -281,7 +281,7 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;paddin
     </div>
     <div class="hcard t" id="hc">
       <span class="pill"><i></i>Cofundador de CIMS</span>
-      <div class="r2"><span>Experiència</span><b>3 empreses · 1 de cofundada</b></div>
+      <div class="r2"><span>Resposta</span><b>En menys de 24 h</b></div>
       <div class="r2"><span>Fem</span><b>Solucions tecnològiques amb IA</b></div>
       <div class="r2"><span>Idiomes</span><b>CA · ES · EN · FR</b></div>
     </div>
@@ -312,9 +312,9 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;paddin
 <section class="band" style="padding-top:0"><div class="wrap">
   <div class="wg">
     <div class="t r"><span class="lab">Estat</span><span class="pill" style="margin-bottom:12px"><i></i>Acceptant projectes</span><p style="margin:0 0 14px;color:var(--mut);font-size:15px">A través de CIMS, per a empreses petites i autònoms.</p><a class="go" href="#ct">Contacta'm <span aria-hidden="true">→</span></a></div>
-    <div class="t r" style="--d:.08s"><span class="lab">Com treballo</span><ol class="how"><li><b>01</b>Escolto què necessites</li><li><b>02</b>Proposo la solució que hi encaixa</li><li><b>03</b>La construeixo i t'acompanyo</li></ol></div>
+    <div class="t term r" style="--d:.08s"><span class="lab">martí@cims ~</span><div id="term" aria-live="off"></div></div>
     <div class="t w2 r" style="--d:.16s"><span class="lab">Idiomes</span><div class="lang"><div>Català<em>Nadiu</em><i style="--w:100%"></i></div><div>Castellà<em>Nadiu</em><i style="--w:100%"></i></div><div>Anglès<em>First (B2)</em><i style="--w:72%"></i></div><div>Francès<em>Conversa</em><i style="--w:45%"></i></div></div></div>
-    <div class="t w2 r" style="--d:.2s"><span class="lab">Què faig</span><ul class="svc"><li>Consultoria tecnològica</li><li>Solucions amb IA</li><li>Desenvolupament web</li><li>Automatitzacions</li><li>Informàtica per a empreses</li></ul></div>
+    <div class="t w2 r" style="--d:.2s"><span class="lab">Què fem amb la IA</span><div class="flow"><svg id="fl" role="img" aria-label="Correus, formularis i Excels passen per la IA i en surten informes, respostes i factures"></svg></div></div>
     <div class="t w2 r" style="--d:.26s"><span class="lab">Ara mateix</span><p class="now">Fent créixer CIMS i automatitzant processos per a clients a UAUU.</p></div>
   </div>
 </div></section>
@@ -389,6 +389,21 @@ if(rm)go();else{let n=0;const t=setInterval(()=>{n=Math.min(100,n+Math.ceil(Math
 // ---------- reveal & counters ----------
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add('in');el.querySelectorAll('[data-c]').forEach(c=>{const to=+c.dataset.c;let v=0;const s=setInterval(()=>{c.textContent=++v;if(v>=to)clearInterval(s)},180)});io.unobserve(el)}),{threshold:.15});
 D.querySelectorAll('.r').forEach(el=>io.observe(el));
+// ---------- terminal ----------
+{const out=$('term');const sc=[['whoami','enginyer de software i\ncofundador de CIMS'],['ls projectes/','web-client  automatitzacions\nassistent-ia  web-cims'],['echo $ESTAT','acceptant projectes ✓']];
+ const line=(c,o)=>{const a=D.createElement('div');a.innerHTML='<span class="p">$</span> ';a.append(c);const b=D.createElement('div');b.className='o';b.textContent=o;return [a,b]};
+ if(rm)sc.forEach(([c,o])=>out.append(...line(c,o)));else{let s=0,started=false;const run=()=>{if(s>=sc.length){setTimeout(()=>{out.textContent='';s=0;run()},3500);return}
+  const [c,o]=sc[s];const l=D.createElement('div');l.innerHTML='<span class="p">$</span> <span></span><span class="caret"></span>';out.append(l);let k=0;
+  const ty=setInterval(()=>{l.children[1].textContent=c.slice(0,++k);if(k>=c.length){clearInterval(ty);l.children[2].remove();const r=D.createElement('div');r.className='o';r.textContent=o;out.append(r);s++;if(out.children.length>6){out.textContent='';out.append(l,r)}setTimeout(run,900)}},70)};
+  const ioT=new IntersectionObserver(es=>{if(!started&&es[0].isIntersecting){started=true;ioT.disconnect();run()}});ioT.observe(out)}}
+// ---------- flux IA ----------
+{const s=$('fl');const draw=()=>{const W=s.clientWidth,H=s.clientHeight;if(!W)return;const L=['Correus','Formularis','Excels'],R=['Informes','Respostes','Factures'];const cx=W/2,cy=H/2,lx=W<420?44:70,rx=W-lx;let o='';
+ [H*.18,H*.5,H*.82].forEach((y,i)=>{const a=`M${lx+38},${y} C${cx-60},${y} ${cx-80},${cy} ${cx-30},${cy}`,b=`M${cx+30},${cy} C${cx+80},${cy} ${cx+60},${y} ${rx-38},${y}`;
+  o+=`<path d="${a}" fill="none" stroke="var(--ln)" stroke-width="2"/><path d="${b}" fill="none" stroke="var(--ln)" stroke-width="2"/>`;
+  if(!rm)o+=`<circle r="4" fill="var(--co)"><animateMotion dur="2.4s" begin="-${2.4-i*.8}s" repeatCount="indefinite" path="${a}"/></circle><circle r="4" fill="var(--co)"><animateMotion dur="2.4s" begin="-${(3.6-i*.8)%2.4+.01}s" repeatCount="indefinite" path="${b}"/></circle>`;
+  o+=`<text x="${lx+30}" y="${y+4}" text-anchor="end" font-size="12" font-weight="600" fill="currentColor">${L[i]}</text><text x="${rx-30}" y="${y+4}" font-size="12" font-weight="600" fill="currentColor">${R[i]}</text>`});
+ o+=`<circle cx="${cx}" cy="${cy}" r="30" fill="var(--co)"/>${rm?'':`<circle cx="${cx}" cy="${cy}" r="30" fill="none" stroke="var(--co)"><animate attributeName="r" values="30;46;30" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0;.6" dur="2.4s" repeatCount="indefinite"/></circle>`}<text x="${cx}" y="${cy+5}" text-anchor="middle" font-family="Unbounded" font-weight="800" font-size="15" fill="var(--onco)">IA</text>`;s.innerHTML=o};
+ const roFl=new ResizeObserver(draw);roFl.observe(s)}
 // ---------- typing rotator ----------
 const roles=['enginyer de software','cofundador de CIMS','desenvolupador full stack','enginyer informàtic','qui t’automatitza la feina'],rot=$('rot');let ri=0,ci=roles[0].length,del=true,hold=0;
 if(!rm)setInterval(()=>{if(hold>0){hold--;return}if(del){ci--;if(ci<=0){del=false;ri=(ri+1)%roles.length}}else{ci++;if(ci>=roles[ri].length){del=true;hold=28}}rot.textContent=roles[ri].slice(0,Math.max(1,ci))},65);
